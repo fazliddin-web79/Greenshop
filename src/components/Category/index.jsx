@@ -5,8 +5,7 @@ import { plants } from "../../mock/flovers";
 import { Container, Item, Title } from "./style";
 
 export const Category = () => {
-  const { category, setcategory, flowers, setFlowers } =
-    useContext(FlowersContext);
+  const { category } = useContext(FlowersContext);
 
   const location = useLocation();
   const activeItem = (name) => {

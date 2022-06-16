@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
 import Navbar from "../components/navbar";
 import Notfount from "../components/notfound";
@@ -7,11 +7,9 @@ import { Container } from "./style";
 import { FlowersContext } from "../context";
 import { status } from "../mock/status";
 import Home from "../components/home";
-import Generic from "../components/generic";
 
 export const Root = () => {
-  const { flowers, setFlowers, category, setcategory } =
-    useContext(FlowersContext);
+  const { category } = useContext(FlowersContext);
 
   return (
     <Container>

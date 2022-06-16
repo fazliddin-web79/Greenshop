@@ -7,8 +7,7 @@ import { Outlet, useLocation, NavLink } from "react-router-dom";
 import { Container, Plants, StatusWrap, Wrap } from "./style";
 
 export const Home = () => {
-  const { flowers, setFlowers } = useContext(FlowersContext);
-  const [plants, setPlants] = useState(flowers);
+  const { flowers } = useContext(FlowersContext);
   const location = useLocation();
 
   const onTo = (name) => {

@@ -1,9 +1,7 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { Container, Image, Title } from "./style";
 
 export const Card = (props) => {
-  const location = useLocation();
   return (
     <Container>
       <Image src={props.data.img} />
