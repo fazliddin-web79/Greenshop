@@ -30,3 +30,17 @@ export const Wrap = styled.div`
   align-items: center;
   width: 100%;
 `;
+
+Wrap.Empty = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+Wrap.Image = styled.img`
+  height: 200px;
+`;
+Wrap.Title = styled.h1`
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+`;

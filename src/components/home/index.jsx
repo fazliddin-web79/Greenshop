@@ -24,7 +24,6 @@ export const Home = () => {
   useEffect(() => {
     setPath(location.pathname.split("/"));
   }, [location.pathname]);
-  
 
   const active = ({ isActive }) => {
     return isActive
@@ -63,10 +62,19 @@ export const Home = () => {
         <Wrap>
           {flowers
             .filter((item) => item.category === path[2])
-            .filter((v) => v.status === path[3])
-            .map((item) => {
-              return <Card key={item.id} data={item} />;
-            })}
+            .filter((v) => v.status === path[3]).length === 0 ? (
+            <Wrap.Empty>
+              <Wrap.Image src="https://cdn-icons-png.flaticon.com/512/6598/6598519.png" />
+              <Wrap.Title> Sorry , Ooops empty folder !!!</Wrap.Title>
+            </Wrap.Empty>
+          ) : (
+            flowers
+              .filter((item) => item.category === path[2])
+              .filter((v) => v.status === path[3])
+              .map((item) => {
+                return <Card key={item.id} data={item} />;
+              })
+          )}
         </Wrap>
       </Plants>
       <Outlet />
