@@ -19,9 +19,13 @@ export const Home = () => {
     return (count += name);
   };
   const [path, setPath] = useState(location.pathname.split("/"));
+  // [ , "home", "seeds", "all"]
+
   useEffect(() => {
     setPath(location.pathname.split("/"));
   }, [location.pathname]);
+  
+
   const active = ({ isActive }) => {
     return isActive
       ? {

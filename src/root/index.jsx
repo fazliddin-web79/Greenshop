@@ -23,8 +23,6 @@ export const Root = () => {
               )
             );
           })}
-          <Route path={"/"} element={<Navigate to={"/home/seeds/all"} />} />
-          <Route path={"/home"} element={<Navigate to={"/home/seeds/all"} />} />
           <Route path={"/home"}>
             {category.map((v) => {
               return (
@@ -42,6 +40,8 @@ export const Root = () => {
               );
             })}
           </Route>
+          <Route path={"/"} element={<Navigate to={"/home/seeds/all"} />} />
+          <Route path={"/home"} element={<Navigate to={"/home/seeds/all"} />} />
         </Route>
         <Route path={"*"} element={<Notfount />} />
       </Routes>
